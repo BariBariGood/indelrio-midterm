@@ -1,0 +1,129 @@
+.modal-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 36px;
+    width: fit-content;
+    margin: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Oxygen', sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  
+    .week {
+      display: flex;
+      flex-direction: column;
+  
+      h2 {
+        font-size: 27.5px;
+        font-weight: 400; // Lighter weight for "Weekly Goals"
+        color: #4b5853;
+        margin: 0;
+      }
+  
+      .date-range {
+        font-size: 22.5px;
+        font-weight: 700; // Bold date range
+        color: #4b5853;
+        margin-top: 4px;
+      }
+    }
+  
+    .close-button {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #7b7b7b;
+      cursor: pointer;
+      top: 16px;
+      right: 16px;
+    }
+  }
+  
+  .goal-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+  
+    .drag-icon {
+      width: 12px;
+      height: 18px;
+      background-image: url('/images/Elipses.svg');
+      background-size: cover;
+      background-position: center;
+      margin-right: 10px;
+    }
+  
+    .goal-input {
+      flex: 1;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      padding: 4px;
+      width: 413px;
+      font-size: 16.25px;
+      color: #5a5a5a;
+  
+      &:focus {
+        outline: none;
+        border-bottom-color: #00c2c2;
+      }
+    }
+  
+    .category-select {
+      margin-left: 24px;
+      padding: 4px;
+      font-size: 15px;
+      color: #2dbdb1;
+      border: none;
+      border-bottom: 1px solid #2dbdb1;
+      width: 210px;
+      background-color: transparent;
+  
+      &:focus {
+        outline: none;
+      }
+  
+      // Specific styles for dropdown options
+      option {
+        color: #5a5a5a;
+      }
+  
+      .apply-internships {
+        color: #2dbdb1;
+      }
+  
+      .class-algorithms {
+        color: #ffb987;
+      }
+  
+      .interview-technical {
+        color: #ee8b72;
+      }
+    }
+  }
+  
+  .save-button {
+    background-color: #00c2c2;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    width: 100px;
+    align-self: flex-end;
+    margin-top: 100px;
+  
+    &:hover {
+      background-color: #00a2a2;
+    }
+  }
+  
