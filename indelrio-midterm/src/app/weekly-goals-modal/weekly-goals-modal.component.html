@@ -15,7 +15,11 @@
         [(ngModel)]="goal.text"
         class="goal-input"
       />
-      <select [(ngModel)]="goal.category" class="category-select">
+      <select
+        [(ngModel)]="goal.category"
+        class="category-select"
+        [ngClass]="getCategoryClass(goal.category)"
+      >
         <option *ngFor="let category of categories" [value]="category">
           {{ category }}
         </option>

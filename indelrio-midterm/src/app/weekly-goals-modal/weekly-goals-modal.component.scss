@@ -22,14 +22,14 @@
   
       h2 {
         font-size: 27.5px;
-        font-weight: 400; // Lighter weight for "Weekly Goals"
+        font-weight: 400;
         color: #4b5853;
         margin: 0;
       }
   
       .date-range {
         font-size: 22.5px;
-        font-weight: 700; // Bold date range
+        font-weight: 700;
         color: #4b5853;
         margin-top: 4px;
       }
@@ -79,32 +79,45 @@
       margin-left: 24px;
       padding: 4px;
       font-size: 15px;
-      color: #2dbdb1;
       border: none;
-      border-bottom: 1px solid #2dbdb1;
+      border-bottom: 1px solid #ccc;
       width: 210px;
       background-color: transparent;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='5'><polygon points='0,0 10,0 5,5' fill='%235a5a5a'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 8px center;
   
       &:focus {
         outline: none;
       }
   
-      // Specific styles for dropdown options
-      option {
-        color: #5a5a5a;
-      }
-  
-      .apply-internships {
+      &.apply-internships {
         color: #2dbdb1;
+        border-bottom-color: #2dbdb1;
       }
   
-      .class-algorithms {
+      &.class-algorithms {
         color: #ffb987;
+        border-bottom-color: #ffb987;
       }
   
-      .interview-technical {
+      &.interview-technical {
         color: #ee8b72;
+        border-bottom-color: #ee8b72;
       }
+  
+      &.default-category {
+        color: #5a5a5a;
+        border-bottom-color: #5a5a5a;
+      }
+    }
+  
+    /* Hide the default arrow in IE */
+    .category-select::-ms-expand {
+      display: none;
     }
   }
   

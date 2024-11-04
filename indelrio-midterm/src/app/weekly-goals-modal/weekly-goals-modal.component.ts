@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { MatSelectModule } from '@angular/material/select';
 
 @Component({
   selector: 'app-weekly-goals-modal',
   standalone: true,
-  imports: [FormsModule, CommonModule, MatSelectModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './weekly-goals-modal.component.html',
   styleUrls: ['./weekly-goals-modal.component.scss']
 })
@@ -26,5 +25,18 @@ export class WeeklyGoalsModalComponent {
 
   closeModal() {
     console.log('Modal closed');
+  }
+
+  getCategoryClass(category: string): string {
+    switch (category) {
+      case '#apply-internships':
+        return 'apply-internships';
+      case '#class-algorithms':
+        return 'class-algorithms';
+      case '#interview-technical':
+        return 'interview-technical';
+      default:
+        return 'default-category';
+    }
   }
 }
